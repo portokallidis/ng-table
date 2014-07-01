@@ -13,11 +13,11 @@
  * @description
  * Each {@link ngTable.directive:ngTable ngTable} directive creates an instance of `ngTableController`
  */
-var ngTableController = ['$scope', 'ngTableParams', '$timeout', function ($scope, ngTableParams, $timeout) {
+var ngTableController = ['$scope', 'TableParams', '$timeout', function ($scope, TableParams, $timeout) {
     $scope.$loading = false;
 
     if (!$scope.params) {
-        $scope.params = new ngTableParams();
+        $scope.params = new TableParams();
     }
     $scope.params.settings().$scope = $scope;
 
